@@ -23,13 +23,16 @@ public class Frame extends JFrame {
 	public static void Trame() {
 
 		while (true) {
+			
 			try {
-				Thread.sleep(100);
+				Thread.sleep(1);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
+			
+			
+			System.out.println( g.Mx);
 			if (k.up == true) {
 				g.y += 10;
 			}
