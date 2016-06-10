@@ -2,8 +2,8 @@ import javax.swing.JFrame;
 
 public class Frame extends JFrame {
 	public static int stopJump;
+	
 	static KeyL k = new KeyL();
-
 	private static Graphique g = new Graphique();
 
 	public Frame() {
@@ -32,7 +32,8 @@ public class Frame extends JFrame {
 			}
 			
 			
-			System.out.println( g.Mx);
+			System.out.println( g.Mx +" "+ g.My +" "+ m.clickCount);
+			
 			if (k.up == true) {
 				g.y += 10;
 			}
@@ -46,8 +47,7 @@ public class Frame extends JFrame {
 				g.x -= 10;
 			}
 			if (k.jump == true) {
-				System.out.println("lol");
-
+				
 			}
 			g.repaint();
 
