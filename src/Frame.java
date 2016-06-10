@@ -32,7 +32,7 @@ public class Frame extends JFrame {
 			}
 			
 			
-			System.out.println( g.Mx +" "+ g.My +" "+ m.clickCount);
+			System.out.println( g.Mx +" "+ g.My );
 			
 			if (k.up == true) {
 				g.y += 10;
