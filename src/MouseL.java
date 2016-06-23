@@ -21,8 +21,8 @@ public class MouseL implements MouseListener{
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		//click = false;
-	}
+		click = false;
+	}	
 
 	@Override
 	public void mouseEntered(MouseEvent e) {

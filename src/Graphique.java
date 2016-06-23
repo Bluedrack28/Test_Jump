@@ -9,7 +9,7 @@ import java.awt.peer.MouseInfoPeer;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-public class Graphique extends JPanel {
+public class Graphique extends JPanel{
 	public static int nbrClarck;
 	public static int Mx;
 	public static int My;
@@ -17,6 +17,13 @@ public class Graphique extends JPanel {
 	public static int y = 200;
 	public static int Bx, By, Bwidth, Bheight;
 	public static int Vert = 255;
+	public static Bouton b = new Bouton(100,100,100,100,new Color(255,0,255));
+	public static Paint p;
+	public static Graphics gr;
+	public Graphique(){
+		
+	}
+	
 	
 	
 	public void paintComponent(Graphics g){
@@ -33,6 +40,7 @@ public class Graphique extends JPanel {
 		g.setColor(new Color(0,255,255));
 		g.drawImage(new ImageIcon("Avatar.png").getImage() , 10, 10, 100, 100, null);
 		g.fillRect(x, y, 10, 10);
+		
 		
 	
 		

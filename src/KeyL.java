@@ -4,14 +4,16 @@ import java.awt.event.KeyListener;
 
 
 public class KeyL implements KeyListener{
+	
 	public static boolean up = false;
 	public static boolean down = false;
 	public static boolean right = false;
 	public static boolean left = false;
 	public static boolean jump = false;
+
 	@Override
 	public void keyPressed(KeyEvent e) {
-		
+		System.out.println(e.getKeyCode());
 		if (e.getKeyChar()=='w'){
 			this.down = true;
 		}
@@ -30,8 +32,8 @@ public class KeyL implements KeyListener{
 		}
 	
 		
-		
 	}
+
 
 	@Override
 	public void keyReleased(KeyEvent e) {
