@@ -2,17 +2,18 @@ import java.awt.Color;
 import java.awt.Point;
 import java.awt.Rectangle;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class Frame extends JFrame {
-	public static int stopJump;
-	static Point p= new Point();
-	static MouseL m = new MouseL();
-	static KeyL k = new KeyL();
-	public static Rectangle rec = new Rectangle(10,100,100,100);
-	private static Graphique g = new Graphique();
-	static Paint paint = new Paint();
-	public static Bouton b = new Bouton(100,100,100,100,new Color(255,0,255));
+	
+	
+	int stopJump;
+	//Point p= new Point();
+	MouseL m = new MouseL();
+	KeyL k = new KeyL();
+	Rectangle rec = new Rectangle(10,100,100,100);
+	Graphique g = new Graphique();
 	
 	public Frame() {
 	
@@ -22,15 +23,17 @@ public class Frame extends JFrame {
 		g.Bwidth = rec.width;
 		g.Bheight = rec.height;
 		
-		
+		this.setIconImage(new ImageIcon("Avatar.png").getImage());
 		this.setTitle("Jeu");
 		this.addMouseListener(m);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(500, 500);
 		this.addKeyListener(k);
 		this.setLocationRelativeTo(null);
-		paint.drawBouton(b);
-		g.paintComponent(paint);
+		
+		//paint.drawBouton(b);
+		//g.paintComponent(paint);
+		
 		this.setContentPane(g);
 		this.setVisible(true);
 		
@@ -38,7 +41,7 @@ public class Frame extends JFrame {
 
 	}
 
-	public static void Trame() {
+	public void Trame() {
 
 		while (true) {
 			
@@ -48,13 +51,20 @@ public class Frame extends JFrame {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			p.x = g.Mx;
-			p.y = g.My;
-			if (rec.contains(p)&& m.click == true){
-				g.nbrClarck ++;
+			//g.p.x = g.Mx;
+			//g.p.y = g.My;
+			if (rec.contains(g.p)&& m.click == true){
+				System.out.println("yool");
+				g.nbrClark ++;
 				m.click = false;
 			}
+			if (g.b.contains(g.p)&& m.click){
+				g.nbrClark += 5;
+				m.click= false;
+			}
 			
+			
+			 
 			
 			//System.out.println( g.Mx +" "+ g.My +" "+ m.click );
 			//if(g.Mx >= g.Bx && g.Mx <= (g.Bx + g.Bwidth) && g.My >= g.Bx && g.My <= (g.By + g.Bheight) && m.click == true ){

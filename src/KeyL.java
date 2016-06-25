@@ -5,11 +5,11 @@ import java.awt.event.KeyListener;
 
 public class KeyL implements KeyListener{
 	
-	public static boolean up = false;
-	public static boolean down = false;
-	public static boolean right = false;
-	public static boolean left = false;
-	public static boolean jump = false;
+	public boolean up = false;
+	public boolean down = false;
+	public boolean right = false;
+	public boolean left = false;
+	public boolean jump = false;
 
 	@Override
 	public void keyPressed(KeyEvent e) {

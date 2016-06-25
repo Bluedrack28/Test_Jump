@@ -3,7 +3,7 @@ import java.awt.event.MouseListener;
 
 public class MouseL implements MouseListener{
 	
-	public static boolean click;
+	public boolean click;
 	
 	
 	@Override
