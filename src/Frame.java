@@ -53,8 +53,19 @@ public class Frame extends JFrame {
 			}
 			//g.p.x = g.Mx;
 			//g.p.y = g.My;
+			//System.out.println(g.bouton2.isClick(g.p));
+			
+			
+			if(g.bouton2.isClick(g.p,m)){
+				System.out.println("yjdbafldhd");
+				m.click = false;
+			}
+			if(g.b.isClick(g.p,m)){
+				System.out.println("yolofsaf");
+				m.click = false;
+			}
+			
 			if (rec.contains(g.p)&& m.click == true){
-				System.out.println("yool");
 				g.nbrClark ++;
 				m.click = false;
 			}
@@ -62,24 +73,9 @@ public class Frame extends JFrame {
 				g.nbrClark += 5;
 				m.click= false;
 			}
-			
-			
-			 
-			
-			//System.out.println( g.Mx +" "+ g.My +" "+ m.click );
-			//if(g.Mx >= g.Bx && g.Mx <= (g.Bx + g.Bwidth) && g.My >= g.Bx && g.My <= (g.By + g.Bheight) && m.click == true ){
-				//System.out.println( g.Mx +" "+ g.My +" "+ m.click );
-			//	System.out.println("CLICK !!");
-			//	g.Vert = 220;
-			//	g.nbrClarck ++;
-			//	m.click = false;
-				
-			//}else{
+
 			g.Vert = 255;
-			//}
-			
-			
-			
+
 			if (k.up == true) {
 				g.y += 10;
 			}

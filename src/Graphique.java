@@ -21,8 +21,8 @@ public class Graphique extends JPanel{
 	public int Bx, By, Bwidth, Bheight;
 	public int Vert = 255;
 	public Bouton b = new Bouton(110,100,100,100,new Color(255,0,255));
-
-	public static Graphics gr;
+	public Bouton bouton2 = new Bouton(210,100,100,100,new Color(0,0,255));
+	public Beautiful_Bouton boutonB = new Beautiful_Bouton(100, 200, 100, 100, new Color(0,0,129));
 
 	public Graphique(){
 		
@@ -37,7 +37,6 @@ public class Graphique extends JPanel{
 		p.x = MouseInfo.getPointerInfo().getLocation().x-getLocationOnScreen().x;
 		
 		MethodeGraph mg = new MethodeGraph(g,p);
-		boolean[][] a = new boolean[10][10];
 		
 		g.setColor(new Color(255, 255,255));
 		g.fillRect(0,0,this.getWidth(),this.getHeight());
@@ -46,8 +45,8 @@ public class Graphique extends JPanel{
 		g.fillRect(x, y, 10, 10);
 		
 		mg.drawBouton(b);
-	
-		
+		mg.drawBouton(bouton2);
+		mg.drawBeautifulBouton(boutonB);
 		g.setColor(new Color(0,Vert,0));
 		g.fillRect(Bx, By, Bwidth, Bheight);
 		
